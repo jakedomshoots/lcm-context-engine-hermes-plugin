@@ -1,0 +1,4 @@
+name: lcm
+description: "Lossless-style SQLite-backed context engine for Hermes (production candidate)"
+version: "0.3.0"
+author: "Clank"

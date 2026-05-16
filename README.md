@@ -73,6 +73,16 @@ python tests/stress/lcm_context_engine_benchmark.py
 
 Writes JSON output to `/tmp/lcm_context_engine_bench.json`.
 
+## Stress-test findings
+
+Latest published soak report:
+- `docs/stress-test-results-2026-05-16.md`
+
+Highlights:
+- 12.5k-message day-equivalent simulation: healthy, WAL truncates cleanly after checkpoint
+- 100k-message extreme soak: healthy post-fix, DB ~60MB, WAL truncates to 0 after checkpoint
+- scalability fix included for SQLite variable-limit overflow during summary bound lookup
+
 ## Notes
 
 - This plugin targets Hermes Agent’s `ContextEngine` interface.

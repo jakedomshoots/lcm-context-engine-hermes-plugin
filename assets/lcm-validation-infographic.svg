@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Hermes LCM Context Engine Validation Results infographic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#151a2f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151d38"/>
+      <stop offset="100%" stop-color="#1d2550"/>
+    </linearGradient>
+    <style>
+      .title{font:700 52px Inter,Segoe UI,Arial,sans-serif; fill:#eaf0ff}
+      .sub{font:400 24px Inter,Segoe UI,Arial,sans-serif; fill:#aebce6}
+      .h{font:700 30px Inter,Segoe UI,Arial,sans-serif; fill:#eaf0ff}
+      .k{font:700 22px Inter,Segoe UI,Arial,sans-serif; fill:#7cd9ff}
+      .v{font:500 22px Inter,Segoe UI,Arial,sans-serif; fill:#dfe7ff}
+      .foot{font:500 20px Inter,Segoe UI,Arial,sans-serif; fill:#9eb0df}
+      .badge{font:700 18px Inter,Segoe UI,Arial,sans-serif; fill:#091022}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" class="title">Hermes LCM Context Engine — Validation Results</text>
+  <text x="80" y="130" class="sub">Production-readiness evidence: stability, scale, concurrency, and blind quality bake-off</text>
+
+  <!-- Cards -->
+  <rect x="70" y="180" rx="20" ry="20" width="710" height="280" fill="url(#card)" stroke="#3b4fa0"/>
+  <rect x="820" y="180" rx="20" ry="20" width="710" height="280" fill="url(#card)" stroke="#3b4fa0"/>
+  <rect x="70" y="500" rx="20" ry="20" width="710" height="280" fill="url(#card)" stroke="#3b4fa0"/>
+  <rect x="820" y="500" rx="20" ry="20" width="710" height="280" fill="url(#card)" stroke="#3b4fa0"/>
+
+  <!-- Stability -->
+  <text x="100" y="230" class="h">1) Stability</text>
+  <rect x="620" y="200" width="130" height="34" rx="17" fill="#9dffb3"/>
+  <text x="655" y="223" class="badge">PASS</text>
+  <text x="100" y="280" class="k">Crash/Restart:</text><text x="320" y="280" class="v">PASS</text>
+  <text x="100" y="320" class="k">Integrity Check:</text><text x="320" y="320" class="v">PRAGMA integrity_check = OK</text>
+  <text x="100" y="360" class="k">Data Recovery:</text><text x="320" y="360" class="v">Seeded facts retrievable after kill/restart</text>
+
+  <!-- Scale -->
+  <text x="850" y="230" class="h">2) Scale</text>
+  <rect x="1370" y="200" width="130" height="34" rx="17" fill="#9dffb3"/>
+  <text x="1405" y="223" class="badge">PASS</text>
+  <text x="850" y="280" class="k">Soak Test:</text><text x="1070" y="280" class="v">250,000 messages</text>
+  <text x="850" y="320" class="k">DB Size:</text><text x="1070" y="320" class="v">~122 MB</text>
+  <text x="850" y="360" class="k">WAL Checkpoint:</text><text x="1070" y="360" class="v">0 MB after truncate</text>
+
+  <!-- Concurrency -->
+  <text x="100" y="550" class="h">3) Concurrency</text>
+  <rect x="620" y="520" width="130" height="34" rx="17" fill="#9dffb3"/>
+  <text x="655" y="543" class="badge">PASS</text>
+  <text x="100" y="600" class="k">Concurrent Reads:</text><text x="320" y="600" class="v">2,298</text>
+  <text x="100" y="640" class="k">Errors:</text><text x="320" y="640" class="v">0</text>
+  <text x="100" y="680" class="k">Read Latency:</text><text x="320" y="680" class="v">p50 33.72ms · p95 115.62ms · max 137.63ms</text>
+
+  <!-- Blind bake-off -->
+  <text x="850" y="550" class="h">4) Blind Bake-off (3 tests)</text>
+  <rect x="1370" y="520" width="130" height="34" rx="17" fill="#9dffb3"/>
+  <text x="1405" y="543" class="badge">WIN</text>
+  <text x="850" y="600" class="k">Overall:</text><text x="1070" y="600" class="v">LCM wins 3/3</text>
+  <text x="850" y="640" class="k">Fact Recall:</text><text x="1070" y="640" class="v">100% vs 0%</text>
+  <text x="850" y="680" class="k">Anchor Pair Recall:</text><text x="1070" y="680" class="v">100% vs 0%</text>
+
+  <text x="80" y="845" class="foot">Config: context.engine=lcm  •  Canary: 72h (hourly metrics + 15m threshold alerts)</text>
+</svg>

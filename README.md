@@ -4,6 +4,8 @@ Standalone distribution of the **LCM (Lossless Context Management) context engin
 
 This repo is intentionally **not** a full Hermes clone. It contains only the plugin and supporting artifacts needed to install, evaluate, and iterate on LCM.
 
+![LCM validation infographic](assets/lcm-validation-infographic.svg)
+
 ## What this plugin provides
 
 - Lossless conversation persistence to SQLite
@@ -78,6 +80,7 @@ Writes JSON output to `/tmp/lcm_context_engine_bench.json`.
 Latest published soak reports:
 - `docs/stress-test-results-2026-05-16.md`
 - `docs/bulletproof-validation-2026-05-17.md`
+- `docs/live-canary-and-blind-eval-2026-05-17.md`
 
 Highlights:
 - 12.5k-message day-equivalent simulation: healthy, WAL truncates cleanly after checkpoint

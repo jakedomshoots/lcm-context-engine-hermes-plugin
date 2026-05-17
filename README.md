@@ -4,7 +4,7 @@ Standalone distribution of the **LCM (Lossless Context Management) context engin
 
 This repo is intentionally **not** a full Hermes clone. It contains only the plugin and supporting artifacts needed to install, evaluate, and iterate on LCM.
 
-![LCM neon validation hero](assets/lcm-neon-hero.svg)
+![LCM neon validation hero](assets/lcm-neon-hero.png)
 
 ## What this plugin provides
 

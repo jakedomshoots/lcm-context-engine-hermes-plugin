@@ -97,6 +97,37 @@ Fix:
 Outcome:
 - 100k and 250k tests pass post-fix.
 
+## 5) Final blind 3-test task-quality bake-off
+
+Method:
+- Ran three independent synthetic "blind" conversation tasks where exact target facts/anchors were known in advance.
+- Compared:
+  - **LCM** via retrieval tools (`lcm_grep`, `lcm_expand`) after compression
+  - **Baseline compacted context** via head/tail-only inline retention
+- Goal: measure practical task-memory utility, not just throughput.
+
+Tests + results:
+1. **T1 Sparse fact recall** (2,612 messages, 6 planted facts)
+   - LCM recall: **6/6 (100%)**
+   - Baseline recall: **0/6 (0%)**
+
+2. **T2 Latest override correctness** (1,806 messages, 6 preference updates)
+   - Expected latest value recovered by LCM: **PASS**
+   - Baseline latest value recovery: **FAIL**
+
+3. **T3 Anchor window integrity** (3,010 messages, 5 anchor/ack pairs)
+   - LCM pair recall: **5/5 (100%)**
+   - Baseline pair recall: **0/5 (0%)**
+
+Aggregate:
+- LCM wins: **3/3 tests**
+
+Artifact:
+- `/tmp/lcm_blind_bakeoff_3tests.json`
+
+Caveat:
+- These are deterministic/proxy task-quality tests (excellent for memory-behavior proof), not human-judged prose-quality ratings.
+
 ## Overall verdict
 
 **GO for production rollout** with operational guardrails:

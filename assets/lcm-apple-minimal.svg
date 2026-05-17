@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Hermes memory before and after LCM">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f8fb"/>
+      <stop offset="100%" stop-color="#eef1f7"/>
+    </linearGradient>
+    <style>
+      .title{font:700 72px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#0b0f19}
+      .sub{font:400 30px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#3e4657}
+      .section{font:600 26px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#111827}
+      .label{font:500 22px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#1f2937}
+      .value{font:700 24px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#0b0f19}
+      .small{font:500 18px -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;fill:#4b5563}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="100" y="130" class="title">Hermes remembers better.</text>
+  <text x="100" y="176" class="sub">LCM keeps long-chat details retrievable instead of dropping them.</text>
+
+  <!-- Card -->
+  <rect x="100" y="230" width="1400" height="520" rx="28" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <!-- Column headers -->
+  <text x="280" y="290" text-anchor="middle" class="section">Before</text>
+  <text x="1320" y="290" text-anchor="middle" class="section">After (LCM)</text>
+
+  <!-- center divider -->
+  <line x1="800" y1="280" x2="800" y2="710" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Row 1 -->
+  <text x="130" y="355" class="label">Fact recall in long chats</text>
+  <rect x="130" y="375" width="590" height="44" rx="22" fill="#f3f4f6"/>
+  <rect x="130" y="375" width="0" height="44" rx="22" fill="#9ca3af"/>
+  <text x="730" y="405" text-anchor="end" class="value">0%</text>
+
+  <rect x="880" y="375" width="590" height="44" rx="22" fill="#eef2ff"/>
+  <rect x="880" y="375" width="590" height="44" rx="22" fill="#1d4ed8"/>
+  <text x="1470" y="405" text-anchor="end" class="value" fill="#0b0f19">100%</text>
+
+  <!-- Row 2 -->
+  <text x="130" y="485" class="label">Anchor + follow-up recall</text>
+  <rect x="130" y="505" width="590" height="44" rx="22" fill="#f3f4f6"/>
+  <rect x="130" y="505" width="0" height="44" rx="22" fill="#9ca3af"/>
+  <text x="730" y="535" text-anchor="end" class="value">0%</text>
+
+  <rect x="880" y="505" width="590" height="44" rx="22" fill="#eef2ff"/>
+  <rect x="880" y="505" width="590" height="44" rx="22" fill="#1d4ed8"/>
+  <text x="1470" y="535" text-anchor="end" class="value">100%</text>
+
+  <!-- Row 3 -->
+  <text x="130" y="615" class="label">Latest preference correctness</text>
+  <rect x="130" y="635" width="590" height="44" rx="22" fill="#f3f4f6"/>
+  <text x="425" y="665" text-anchor="middle" class="value" fill="#6b7280">FAIL</text>
+
+  <rect x="880" y="635" width="590" height="44" rx="22" fill="#eef2ff"/>
+  <text x="1175" y="665" text-anchor="middle" class="value" fill="#1d4ed8">PASS</text>
+
+  <text x="100" y="820" class="small">Based on stress + blind bake-off tests in this repository. Cleaner memory continuity, fewer "you forgot" moments.</text>
+</svg>

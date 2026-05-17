@@ -75,12 +75,14 @@ Writes JSON output to `/tmp/lcm_context_engine_bench.json`.
 
 ## Stress-test findings
 
-Latest published soak report:
+Latest published soak reports:
 - `docs/stress-test-results-2026-05-16.md`
+- `docs/bulletproof-validation-2026-05-17.md`
 
 Highlights:
 - 12.5k-message day-equivalent simulation: healthy, WAL truncates cleanly after checkpoint
 - 100k-message extreme soak: healthy post-fix, DB ~60MB, WAL truncates to 0 after checkpoint
+- 250k-message growth projection: healthy, DB ~122MB, expected latency slope under heavy volume
 - scalability fix included for SQLite variable-limit overflow during summary bound lookup
 
 ## Notes

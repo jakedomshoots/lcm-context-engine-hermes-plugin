@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Hermes LCM cinematic improvement graphic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#030816"/>
+      <stop offset="100%" stop-color="#0a132a"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1ce3ff" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#1ce3ff" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#8d62ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8d62ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title{font:700 96px Orbitron,Exo 2,Inter,Segoe UI,Arial,sans-serif;letter-spacing:3px;fill:#edf6ff}
+      .sub{font:500 24px Inter,Segoe UI,Arial,sans-serif;fill:#a8c7e9}
+      .panelH{font:700 22px Inter,Segoe UI,Arial,sans-serif;letter-spacing:1px;fill:#7de9ff}
+      .metric{font:700 42px Inter,Segoe UI,Arial,sans-serif;fill:#ecf4ff}
+      .label{font:500 19px Inter,Segoe UI,Arial,sans-serif;fill:#a9bddf}
+      .body{font:500 20px Inter,Segoe UI,Arial,sans-serif;fill:#e4eeff}
+      .chip{font:700 16px Inter,Segoe UI,Arial,sans-serif;fill:#071325}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M40 120 C260 30, 470 190, 700 100 C930 10, 1140 220, 1420 110 C1500 80, 1560 95, 1600 125" stroke="url(#aurora)" stroke-width="30" fill="none" filter="url(#glow)"/>
+  <path d="M0 595 L120 520 L240 570 L365 500 L500 575 L640 510 L780 580 L930 505 L1080 585 L1230 515 L1390 585 L1510 540 L1600 570 L1600 900 L0 900 Z" fill="#0c1833"/>
+
+  <text x="800" y="250" text-anchor="middle" class="title" filter="url(#glow)">HERMES + LCM</text>
+  <text x="800" y="292" text-anchor="middle" class="sub">Long-chat memory that stays retrievable</text>
+
+  <rect x="420" y="322" width="760" height="58" rx="12" fill="#0b1a36" stroke="#2adfff" opacity="0.95"/>
+  <text x="800" y="358" text-anchor="middle" class="body">Less forgetting. Better continuity. Same Hermes.</text>
+
+  <!-- left panel -->
+  <rect x="80" y="430" width="460" height="360" rx="18" fill="#0d1b38" stroke="#2adfff"/>
+  <text x="110" y="470" class="panelH">BEFORE</text>
+  <text x="110" y="520" class="label">Fact recall in long chats</text>
+  <text x="470" y="520" text-anchor="end" class="metric">0%</text>
+  <rect x="110" y="535" width="400" height="16" rx="8" fill="#27344e"/>
+  <rect x="110" y="535" width="8" height="16" rx="8" fill="#6b7a97"/>
+
+  <text x="110" y="595" class="label">Anchor + follow-up recall</text>
+  <text x="470" y="595" text-anchor="end" class="metric">0%</text>
+  <rect x="110" y="610" width="400" height="16" rx="8" fill="#27344e"/>
+  <rect x="110" y="610" width="8" height="16" rx="8" fill="#6b7a97"/>
+
+  <text x="110" y="670" class="label">Latest preference correctness</text>
+  <rect x="110" y="685" width="140" height="34" rx="17" fill="#3b455d"/>
+  <text x="180" y="708" text-anchor="middle" class="chip" fill="#e7eefc">FAIL</text>
+
+  <!-- right panel -->
+  <rect x="1060" y="430" width="460" height="360" rx="18" fill="#0d1b38" stroke="#8d62ff"/>
+  <text x="1090" y="470" class="panelH" fill="#c3a8ff">AFTER (LCM)</text>
+  <text x="1090" y="520" class="label">Fact recall in long chats</text>
+  <text x="1450" y="520" text-anchor="end" class="metric">100%</text>
+  <rect x="1090" y="535" width="400" height="16" rx="8" fill="#27344e"/>
+  <rect x="1090" y="535" width="400" height="16" rx="8" fill="#2a7dff"/>
+
+  <text x="1090" y="595" class="label">Anchor + follow-up recall</text>
+  <text x="1450" y="595" text-anchor="end" class="metric">100%</text>
+  <rect x="1090" y="610" width="400" height="16" rx="8" fill="#27344e"/>
+  <rect x="1090" y="610" width="400" height="16" rx="8" fill="#2a7dff"/>
+
+  <text x="1090" y="670" class="label">Latest preference correctness</text>
+  <rect x="1090" y="685" width="140" height="34" rx="17" fill="#9dffb3"/>
+  <text x="1160" y="708" text-anchor="middle" class="chip">PASS</text>
+
+  <!-- center explainer -->
+  <rect x="590" y="450" width="420" height="300" rx="18" fill="#0f2143" stroke="#335d9f"/>
+  <text x="620" y="495" class="panelH">WHAT LCM DOES</text>
+  <text x="620" y="545" class="body">1) Stores older context safely</text>
+  <text x="620" y="585" class="body">2) Compresses without deleting history</text>
+  <text x="620" y="625" class="body">3) Lets Hermes retrieve facts later</text>
+  <text x="620" y="690" class="label">Result: fewer “you forgot” moments.</text>
+</svg>

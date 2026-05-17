@@ -4,7 +4,7 @@ Standalone distribution of the **LCM (Lossless Context Management) context engin
 
 This repo is intentionally **not** a full Hermes clone. It contains only the plugin and supporting artifacts needed to install, evaluate, and iterate on LCM.
 
-![Hermes memory improvement before vs after LCM](assets/lcm-apple-minimal.png)
+![Hermes memory improvement before vs after LCM](assets/lcm-boreal-style-clean.png)
 
 ## What this plugin provides
 
